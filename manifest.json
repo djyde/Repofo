@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Repofo",
+    "version": "0.0.1",
+    "description": "Show more informations about a github repo.",
+    "author": "Randy",
+    "homepage_url": "http://djyde.github.io",
+    "content_scripts": [{
+        "matches": ["https://github.com/*"],
+        "js": ["js/jquery.min.js", "js/jquery.powertip.min.js","js/main.js"],
+        "css": ["css/jquery.powertip-dark.min.css"],
+        "run_at": "document_end"
+    }],
+    "permissions": ["https://github.com/*","https://api.github.com/*"],
+    "web_accessible_resources": ["js/jquery.min.js","js/main.js","js/jquery.powertip.min.js"]
+}
